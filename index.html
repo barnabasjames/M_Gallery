@@ -6,6 +6,11 @@
     <title>M Gallery - Premium Motorcycle Showcase</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -16,11 +21,11 @@
                 <span>M Gallery</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#collection" class="nav-link">Collection</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="collection.html" class="nav-link">Collection</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -30,13 +35,15 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Animated Background -->
     <section id="home" class="hero">
+        <div class="hero-particles"></div>
         <div class="hero-content">
-            <h1 class="hero-title">M Gallery</h1>
+            <h1 class="hero-title">M GALLERY</h1>
+            <div class="title-underline"></div>
             <p class="hero-subtitle">Experience the Art of Two-Wheeled Perfection</p>
             <p class="hero-description">Discover an exclusive collection of premium motorcycles showcasing innovation, power, and elegance</p>
-            <button class="cta-button">Explore Collection</button>
+            <button class="cta-button" onclick="window.location.href='gallery.html'">Explore Collection</button>
         </div>
         <div class="hero-overlay"></div>
     </section>
@@ -49,17 +56,19 @@
                 <div class="featured-card">
                     <div class="featured-image">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Sport Bike">
+                        <div class="badge">2026 Model</div>
                     </div>
                     <div class="featured-info">
                         <h3>Velocity Pro</h3>
-                        <p class="model-year">2026 Model</p>
-                        <p class="specs">0-100 km/h in 3.2 seconds</p>
+                        <p class="specs"><i class="fas fa-tachometer-alt"></i> 0-100 km/h in 3.2 seconds</p>
+                        <p class="specs"><i class="fas fa-bolt"></i> 200 HP Engine</p>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">(4.5/5)</span>
                         </div>
                         <p class="price">$24,999</p>
                         <button class="btn-secondary">View Details</button>
@@ -69,17 +78,19 @@
                 <div class="featured-card">
                     <div class="featured-image">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Cruiser">
+                        <div class="badge">2026 Model</div>
                     </div>
                     <div class="featured-info">
                         <h3>Elite Cruiser</h3>
-                        <p class="model-year">2026 Model</p>
-                        <p class="specs">Smooth cruising at 180 km/h</p>
+                        <p class="specs"><i class="fas fa-cruise-control"></i> Smooth cruising at 180 km/h</p>
+                        <p class="specs"><i class="fas fa-droplet"></i> 150 HP Engine</p>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
+                            <span class="rating-text">(5/5)</span>
                         </div>
                         <p class="price">$18,999</p>
                         <button class="btn-secondary">View Details</button>
@@ -89,17 +100,19 @@
                 <div class="featured-card">
                     <div class="featured-image">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Adventure Bike">
+                        <div class="badge">2026 Model</div>
                     </div>
                     <div class="featured-info">
                         <h3>Adventure Master</h3>
-                        <p class="model-year">2026 Model</p>
-                        <p class="specs">All-terrain capability</p>
+                        <p class="specs"><i class="fas fa-mountain"></i> All-terrain capability</p>
+                        <p class="specs"><i class="fas fa-road"></i> 180 HP Engine</p>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">(4.5/5)</span>
                         </div>
                         <p class="price">$21,999</p>
                         <button class="btn-secondary">View Details</button>
@@ -109,81 +122,18 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Motorcycle Gallery</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="sport">Sport</button>
-                <button class="filter-btn" data-filter="cruiser">Cruiser</button>
-                <button class="filter-btn" data-filter="adventure">Adventure</button>
-                <button class="filter-btn" data-filter="touring">Touring</button>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item sport">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Sport Bike 1">
-                    <div class="gallery-overlay">
-                        <h4>Lightning Racer</h4>
-                        <p>High Performance Sport</p>
-                    </div>
-                </div>
-                <div class="gallery-item cruiser">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Cruiser 1">
-                    <div class="gallery-overlay">
-                        <h4>Midnight Cruiser</h4>
-                        <p>Classic Comfort Ride</p>
-                    </div>
-                </div>
-                <div class="gallery-item adventure">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Adventure 1">
-                    <div class="gallery-overlay">
-                        <h4>Trail Explorer</h4>
-                        <p>Off-Road Champion</p>
-                    </div>
-                </div>
-                <div class="gallery-item sport">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Sport Bike 2">
-                    <div class="gallery-overlay">
-                        <h4>Thunder Beast</h4>
-                        <p>Ultimate Speed Machine</p>
-                    </div>
-                </div>
-                <div class="gallery-item touring">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Touring 1">
-                    <div class="gallery-overlay">
-                        <h4>Grand Traveler</h4>
-                        <p>Long Distance Comfort</p>
-                    </div>
-                </div>
-                <div class="gallery-item cruiser">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Cruiser 2">
-                    <div class="gallery-overlay">
-                        <h4>Heritage Classic</h4>
-                        <p>Timeless Elegance</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Collection Section -->
-    <section id="collection" class="collection">
+    <!-- Collection Preview Section -->
+    <section class="collection-preview">
         <div class="container">
             <h2 class="section-title">Our Collections</h2>
-            <div class="collection-grid">
+            <div class="collection-preview-grid">
                 <div class="collection-card">
                     <div class="collection-icon">
                         <i class="fas fa-wind"></i>
                     </div>
                     <h3>Sport Series</h3>
-                    <p>High-performance bikes engineered for speed and precision. Perfect for track enthusiasts and thrill-seekers.</p>
-                    <ul class="specs-list">
-                        <li>Top Speed: 300+ km/h</li>
-                        <li>Advanced ABS</li>
-                        <li>Aerodynamic Design</li>
-                        <li>Sport Suspension</li>
-                    </ul>
+                    <p>High-performance bikes for speed enthusiasts</p>
+                    <a href="collection.html" class="link-btn">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="collection-card">
@@ -191,13 +141,8 @@
                         <i class="fas fa-crown"></i>
                     </div>
                     <h3>Cruiser Collection</h3>
-                    <p>Premium cruising machines with classic elegance. Built for comfort and commanding presence on the road.</p>
-                    <ul class="specs-list">
-                        <li>Low-Slung Seat</li>
-                        <li>Comfortable Ergonomics</li>
-                        <li>Chrome Accents</li>
-                        <li>Heavy Torque</li>
-                    </ul>
+                    <p>Classic elegance with commanding presence</p>
+                    <a href="collection.html" class="link-btn">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="collection-card">
@@ -205,13 +150,8 @@
                         <i class="fas fa-mountain"></i>
                     </div>
                     <h3>Adventure Range</h3>
-                    <p>Versatile machines designed for both on-road and off-road adventures. Explore without limits.</p>
-                    <ul class="specs-list">
-                        <li>All-Terrain Tires</li>
-                        <li>High Ground Clearance</li>
-                        <li>Rugged Build</li>
-                        <li>Long-Range Tank</li>
-                    </ul>
+                    <p>Versatile machines for any terrain</p>
+                    <a href="collection.html" class="link-btn">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="collection-card">
@@ -219,13 +159,8 @@
                         <i class="fas fa-road"></i>
                     </div>
                     <h3>Touring Elite</h3>
-                    <p>Long-distance champions with luxury features. Your perfect companion for extended journeys.</p>
-                    <ul class="specs-list">
-                        <li>Extended Range</li>
-                        <li>Premium Comfort</li>
-                        <li>Advanced Tech</li>
-                        <li>Storage Capacity</li>
-                    </ul>
+                    <p>Long-distance comfort and luxury</p>
+                    <a href="collection.html" class="link-btn">Explore <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -268,84 +203,12 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Call to Action Section -->
+    <section class="cta-section">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About M Gallery</h2>
-                    <p>M Gallery is a premier motorcycle showcase platform dedicated to bringing you the finest collection of motorcycles from around the world. With over 15 years of expertise in the industry, we pride ourselves on quality, authenticity, and customer satisfaction.</p>
-                    <p>Our mission is to connect passionate motorcycle enthusiasts with their dream bikes. We handpick every motorcycle in our gallery to ensure it meets our strict standards of excellence.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h4>500+</h4>
-                            <p>Motorcycles Sold</p>
-                        </div>
-                        <div class="stat">
-                            <h4>10,000+</h4>
-                            <p>Happy Customers</p>
-                        </div>
-                        <div class="stat">
-                            <h4>50+</h4>
-                            <p>Brands</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=400&fit=crop" alt="About M Gallery">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Location</h4>
-                        <p>123 Motorcycle Street<br>Premium City, PC 12345</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-phone"></i>
-                        <h4>Phone</h4>
-                        <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p>info@mgallery.com<br>support@mgallery.com</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-clock"></i>
-                        <h4>Hours</h4>
-                        <p>Mon - Fri: 9AM - 6PM<br>Sat - Sun: 10AM - 4PM</p>
-                    </div>
-                </div>
-
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message" rows="6" required></textarea>
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h3>Subscribe to Our Newsletter</h3>
-            <p>Get exclusive updates on new arrivals, special offers, and motorcycle tips</p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button class="cta-button">Subscribe</button>
-            </div>
+            <h2>Ready to Find Your Perfect Ride?</h2>
+            <p>Explore our complete collection and discover the motorcycle of your dreams</p>
+            <button class="cta-button" onclick="window.location.href='gallery.html'">Browse Full Gallery</button>
         </div>
     </section>
 
@@ -366,10 +229,10 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#collection">Collection</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -387,7 +250,7 @@
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
