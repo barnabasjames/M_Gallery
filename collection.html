@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Collections - M Gallery</title>
+    <meta name="description" content="M Gallery Collections - Explore our gallery collections of sport, cruiser, adventure, and touring motorcycles with detailed specifications.">
+    <meta name="keywords" content="motorcycle collections, sport bikes gallery, cruiser motorcycles, adventure bikes, touring motorcycles, motorcycle showcase">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Motorcycle Collections - M Gallery">
+    <meta property="og:description" content="Explore our exclusive motorcycle gallery collections">
+    
+    <title>Motorcycle Collections - Gallery Showcase | M Gallery</title>
+    <link rel="canonical" href="https://www.mgallery.com/collection.html">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Premium Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-motorcycle"></i>
+                <i class="fas fa-motorcycle" aria-hidden="true"></i>
                 <span>M Gallery</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="collection.html" class="nav-link active">Collection</a></li>
+                <li><a href="collection.html" class="nav-link active">Collections</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -37,52 +53,53 @@
 
     <!-- Page Header -->
     <div class="page-header">
-        <h1>Our Collections</h1>
-        <p>Discover our exclusive motorcycle collections</p>
+        <h1>Gallery Collections</h1>
+        <p>Discover our exclusive motorcycle gallery collections</p>
     </div>
 
     <!-- Collections Section -->
-    <section class="collections-page">
+    <section class="collections-page" role="main" aria-labelledby="collections-heading">
         <div class="container">
+            <h2 id="collections-heading" class="sr-only">Browse Motorcycle Collections</h2>
             
             <!-- Sport Series Collection -->
-            <div class="collection-showcase">
+            <div class="collection-showcase" id="sport">
                 <div class="collection-header">
-                    <h2>Sport Series</h2>
-                    <p class="collection-description">High-performance machines engineered for speed and precision. Perfect for track enthusiasts and thrill-seekers who demand the ultimate riding experience.</p>
+                    <h2>Sport Collection</h2>
+                    <p class="collection-description">High-performance sport motorcycles engineered for speed and precision. These machines are designed for riders who demand the ultimate performance, cutting-edge technology, and thrilling acceleration.</p>
                 </div>
                 
                 <div class="collection-content">
                     <div class="collection-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Sport Bike">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Sport motorcycle collection showcase">
                     </div>
                     
                     <div class="collection-details">
                         <div class="specs-section">
-                            <h4>Key Features</h4>
+                            <h3>Key Characteristics</h3>
                             <ul class="feature-list">
-                                <li><i class="fas fa-check"></i> Top Speed: 300+ km/h</li>
-                                <li><i class="fas fa-check"></i> Advanced ABS Technology</li>
-                                <li><i class="fas fa-check"></i> Aerodynamic Design</li>
-                                <li><i class="fas fa-check"></i> Sport Suspension System</li>
-                                <li><i class="fas fa-check"></i> Lightweight Carbon Frame</li>
-                                <li><i class="fas fa-check"></i> Digital Dashboard</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Top Speed: 300+ km/h</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Advanced ABS Technology</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Aerodynamic Design</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Sport Suspension System</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Lightweight Carbon Frame</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Digital Dashboard</li>
                             </ul>
                         </div>
                         
                         <div class="specs-section">
-                            <h4>Performance Specs</h4>
+                            <h3>Typical Specifications</h3>
                             <div class="specs-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Engine</span>
                                     <span class="spec-value">1299cc</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Power</span>
+                                    <span class="spec-label">Power Output</span>
                                     <span class="spec-value">200 HP</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">0-100 km/h</span>
+                                    <span class="spec-label">Acceleration</span>
                                     <span class="spec-value">3.2 sec</span>
                                 </div>
                                 <div class="spec-item">
@@ -93,7 +110,7 @@
                         </div>
 
                         <div class="collection-models">
-                            <h4>Popular Models</h4>
+                            <h3>Gallery Models</h3>
                             <div class="model-tags">
                                 <span class="model-tag">Lightning Racer</span>
                                 <span class="model-tag">Thunder Beast</span>
@@ -102,49 +119,49 @@
                             </div>
                         </div>
 
-                        <button class="cta-button">View Sport Collection</button>
+                        <button class="cta-button" onclick="window.location.href='gallery.html'" aria-label="View sport motorcycles in gallery">View in Gallery</button>
                     </div>
                 </div>
             </div>
 
             <!-- Cruiser Collection -->
-            <div class="collection-showcase alternate">
+            <div class="collection-showcase alternate" id="cruiser">
                 <div class="collection-header">
                     <h2>Cruiser Collection</h2>
-                    <p class="collection-description">Premium cruising machines with classic elegance. Built for comfort and commanding presence on the road. Perfect for leisurely rides and long-distance cruising.</p>
+                    <p class="collection-description">Premium cruising motorcycles with classic elegance and timeless design. Built for comfort and commanding presence on the road, these machines offer a perfect blend of style, comfort, and performance.</p>
                 </div>
                 
                 <div class="collection-content">
                     <div class="collection-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Cruiser">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Cruiser motorcycle collection showcase">
                     </div>
                     
                     <div class="collection-details">
                         <div class="specs-section">
-                            <h4>Key Features</h4>
+                            <h3>Key Characteristics</h3>
                             <ul class="feature-list">
-                                <li><i class="fas fa-check"></i> Low-Slung Seat Design</li>
-                                <li><i class="fas fa-check"></i> Comfortable Ergonomics</li>
-                                <li><i class="fas fa-check"></i> Chrome & Steel Accents</li>
-                                <li><i class="fas fa-check"></i> Heavy Torque Engine</li>
-                                <li><i class="fas fa-check"></i> Relaxed Riding Position</li>
-                                <li><i class="fas fa-check"></i> Extended Fuel Range</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Low-Slung Seat Design</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Comfortable Ergonomics</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Chrome & Steel Accents</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Heavy Torque Engine</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Relaxed Riding Position</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Extended Fuel Range</li>
                             </ul>
                         </div>
                         
                         <div class="specs-section">
-                            <h4>Performance Specs</h4>
+                            <h3>Typical Specifications</h3>
                             <div class="specs-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Engine</span>
                                     <span class="spec-value">1200cc</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Power</span>
+                                    <span class="spec-label">Power Output</span>
                                     <span class="spec-value">150 HP</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">0-100 km/h</span>
+                                    <span class="spec-label">Acceleration</span>
                                     <span class="spec-value">5.0 sec</span>
                                 </div>
                                 <div class="spec-item">
@@ -155,7 +172,7 @@
                         </div>
 
                         <div class="collection-models">
-                            <h4>Popular Models</h4>
+                            <h3>Gallery Models</h3>
                             <div class="model-tags">
                                 <span class="model-tag">Midnight Cruiser</span>
                                 <span class="model-tag">Heritage Classic</span>
@@ -164,49 +181,49 @@
                             </div>
                         </div>
 
-                        <button class="cta-button">View Cruiser Collection</button>
+                        <button class="cta-button" onclick="window.location.href='gallery.html'" aria-label="View cruiser motorcycles in gallery">View in Gallery</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Adventure Range -->
-            <div class="collection-showcase">
+            <!-- Adventure Collection -->
+            <div class="collection-showcase" id="adventure">
                 <div class="collection-header">
-                    <h2>Adventure Range</h2>
-                    <p class="collection-description">Versatile machines designed for both on-road and off-road adventures. Explore without limits with robust engineering and rugged capability.</p>
+                    <h2>Adventure Collection</h2>
+                    <p class="collection-description">Versatile motorcycles designed for both on-road and off-road adventures. Explore any terrain with robust engineering, rugged capability, and the perfect balance of performance and comfort.</p>
                 </div>
                 
                 <div class="collection-content">
                     <div class="collection-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Adventure Bike">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Adventure motorcycle collection showcase">
                     </div>
                     
                     <div class="collection-details">
                         <div class="specs-section">
-                            <h4>Key Features</h4>
+                            <h3>Key Characteristics</h3>
                             <ul class="feature-list">
-                                <li><i class="fas fa-check"></i> All-Terrain Tires</li>
-                                <li><i class="fas fa-check"></i> High Ground Clearance</li>
-                                <li><i class="fas fa-check"></i> Rugged Build Quality</li>
-                                <li><i class="fas fa-check"></i> Long-Range Fuel Tank</li>
-                                <li><i class="fas fa-check"></i> Traction Control System</li>
-                                <li><i class="fas fa-check"></i> Windscreen & Protection</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> All-Terrain Tires</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> High Ground Clearance</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Rugged Build Quality</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Long-Range Fuel Tank</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Traction Control System</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Protective Windscreen</li>
                             </ul>
                         </div>
                         
                         <div class="specs-section">
-                            <h4>Performance Specs</h4>
+                            <h3>Typical Specifications</h3>
                             <div class="specs-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Engine</span>
                                     <span class="spec-value">1100cc</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Power</span>
+                                    <span class="spec-label">Power Output</span>
                                     <span class="spec-value">180 HP</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">0-100 km/h</span>
+                                    <span class="spec-label">Acceleration</span>
                                     <span class="spec-value">4.2 sec</span>
                                 </div>
                                 <div class="spec-item">
@@ -217,7 +234,7 @@
                         </div>
 
                         <div class="collection-models">
-                            <h4>Popular Models</h4>
+                            <h3>Gallery Models</h3>
                             <div class="model-tags">
                                 <span class="model-tag">Trail Explorer</span>
                                 <span class="model-tag">Desert Storm</span>
@@ -226,49 +243,49 @@
                             </div>
                         </div>
 
-                        <button class="cta-button">View Adventure Range</button>
+                        <button class="cta-button" onclick="window.location.href='gallery.html'" aria-label="View adventure motorcycles in gallery">View in Gallery</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Touring Elite -->
-            <div class="collection-showcase alternate">
+            <!-- Touring Collection -->
+            <div class="collection-showcase alternate" id="touring">
                 <div class="collection-header">
-                    <h2>Touring Elite</h2>
-                    <p class="collection-description">Long-distance champions with luxury features. Your perfect companion for extended journeys with premium comfort and advanced technology.</p>
+                    <h2>Touring Collection</h2>
+                    <p class="collection-description">Long-distance touring motorcycles with luxury features and premium comfort. Your perfect companion for extended journeys with advanced technology and exceptional comfort.</p>
                 </div>
                 
                 <div class="collection-content">
                     <div class="collection-image">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Touring Bike">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Touring motorcycle collection showcase">
                     </div>
                     
                     <div class="collection-details">
                         <div class="specs-section">
-                            <h4>Key Features</h4>
+                            <h3>Key Characteristics</h3>
                             <ul class="feature-list">
-                                <li><i class="fas fa-check"></i> Extended Fuel Range</li>
-                                <li><i class="fas fa-check"></i> Premium Comfort Seating</li>
-                                <li><i class="fas fa-check"></i> Advanced Navigation System</li>
-                                <li><i class="fas fa-check"></i> Luxury Accessories</li>
-                                <li><i class="fas fa-check"></i> Cruise Control</li>
-                                <li><i class="fas fa-check"></i> Storage Capacity</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Extended Fuel Range</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Premium Comfort Seating</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Advanced Navigation</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Luxury Accessories</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Cruise Control System</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Storage Capacity</li>
                             </ul>
                         </div>
                         
                         <div class="specs-section">
-                            <h4>Performance Specs</h4>
+                            <h3>Typical Specifications</h3>
                             <div class="specs-grid">
                                 <div class="spec-item">
                                     <span class="spec-label">Engine</span>
                                     <span class="spec-value">1300cc</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">Power</span>
+                                    <span class="spec-label">Power Output</span>
                                     <span class="spec-value">175 HP</span>
                                 </div>
                                 <div class="spec-item">
-                                    <span class="spec-label">0-100 km/h</span>
+                                    <span class="spec-label">Acceleration</span>
                                     <span class="spec-value">4.5 sec</span>
                                 </div>
                                 <div class="spec-item">
@@ -279,7 +296,7 @@
                         </div>
 
                         <div class="collection-models">
-                            <h4>Popular Models</h4>
+                            <h3>Gallery Models</h3>
                             <div class="model-tags">
                                 <span class="model-tag">Grand Traveler</span>
                                 <span class="model-tag">Luxury Voyager</span>
@@ -288,66 +305,66 @@
                             </div>
                         </div>
 
-                        <button class="cta-button">View Touring Elite</button>
+                        <button class="cta-button" onclick="window.location.href='gallery.html'" aria-label="View touring motorcycles in gallery">View in Gallery</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Feature -->
-    <section class="comparison-cta">
+    <!-- Explore More Section -->
+    <section class="explore-more" aria-labelledby="explore-heading">
         <div class="container">
-            <h2>Can't Decide?</h2>
-            <p>Compare our collections side by side to find the perfect fit for your lifestyle</p>
-            <button class="cta-button" onclick="window.location.href='gallery.html'">Compare Models</button>
+            <h2 id="explore-heading">Explore More</h2>
+            <p>Browse our complete gallery to discover all models and collections</p>
+            <button class="cta-button" onclick="window.location.href='gallery.html'" aria-label="View all motorcycles in gallery">View Full Gallery</button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>M Gallery</h4>
-                    <p>Your ultimate destination for premium motorcycles and exceptional service.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    <p>Your premier destination for premium motorcycle gallery and showcase</p>
+                    <div class="social-links" role="list">
+                        <a href="#" role="listitem" aria-label="M Gallery Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="M Gallery Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="M Gallery Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="M Gallery YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="collection.html">Collection</a></li>
-                        <li><a href="about.html">About</a></li>
+                    <ul role="list">
+                        <li role="listitem"><a href="index.html">Home</a></li>
+                        <li role="listitem"><a href="gallery.html">Gallery</a></li>
+                        <li role="listitem"><a href="collection.html">Collections</a></li>
+                        <li role="listitem"><a href="about.html">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Collections</h4>
-                    <ul>
-                        <li><a href="#">Sport Series</a></li>
-                        <li><a href="#">Cruiser Collection</a></li>
-                        <li><a href="#">Adventure Range</a></li>
-                        <li><a href="#">Touring Elite</a></li>
+                    <ul role="list">
+                        <li role="listitem"><a href="#sport">Sport Collection</a></li>
+                        <li role="listitem"><a href="#cruiser">Cruiser Collection</a></li>
+                        <li role="listitem"><a href="#adventure">Adventure Collection</a></li>
+                        <li role="listitem"><a href="#touring">Touring Collection</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                    <ul role="list">
+                        <li role="listitem"><a href="#" rel="nofollow">Gallery FAQ</a></li>
+                        <li role="listitem"><a href="#" rel="nofollow">Privacy Policy</a></li>
+                        <li role="listitem"><a href="#" rel="nofollow">Terms of Service</a></li>
+                        <li role="listitem"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 M Gallery. All Rights Reserved. | Premium Motorcycle Showcase</p>
+                <p>&copy; 2026 M Gallery. All Rights Reserved. | Premium Motorcycle Gallery | <a href="sitemap.xml" rel="nofollow">Sitemap</a></p>
             </div>
         </div>
     </footer>
