@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact M Gallery - Reach our premium motorcycle dealer. Phone, email, address, and contact form for motorcycle inquiries, sales, and support.">
-    <meta name="keywords" content="contact motorcycle dealer, M Gallery contact, motorcycle sales inquiries, customer support, contact form">
+    <meta name="description" content="Contact M Gallery - Reach out with your motorcycle gallery inquiries. Phone, email, and contact form available.">
+    <meta name="keywords" content="contact motorcycle gallery, gallery inquiries, motorcycle questions, get in touch">
     <meta name="robots" content="index, follow">
-    <title>Contact M Gallery - Premium Motorcycle Dealer Support</title>
+    <title>Contact M Gallery - Motorcycle Gallery Inquiries</title>
     <link rel="canonical" href="https://www.mgallery.com/contact.html">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,6 +22,7 @@
     </script>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo">
@@ -31,7 +32,7 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="collection.html" class="nav-link">Collection</a></li>
+                <li><a href="collection.html" class="nav-link">Collections</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
@@ -43,20 +44,23 @@
         </div>
     </nav>
 
+    <!-- Page Header -->
     <div class="page-header">
         <h1>Contact M Gallery</h1>
-        <p>Get in touch with our expert motorcycle team</p>
+        <p>Get in touch with our gallery team</p>
     </div>
 
+    <!-- Contact Section -->
     <section class="contact-page" role="main" aria-labelledby="contact-heading">
         <div class="container">
             <h2 id="contact-heading" class="sr-only">Contact Information and Form</h2>
             
+            <!-- Contact Info Cards -->
             <div class="contact-info-grid">
                 <div class="contact-info-card">
                     <div class="info-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
-                    <h3>Visit Our Showroom</h3>
-                    <p>123 Motorcycle Street</p>
+                    <h3>Visit Our Gallery</h3>
+                    <p>123 Gallery Street</p>
                     <p>Premium City, PC 12345</p>
                     <p class="country">United States</p>
                     <a href="#" class="info-link">Get Directions <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
@@ -64,10 +68,10 @@
 
                 <div class="contact-info-card">
                     <div class="info-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
-                    <h3>Call Us for Motorcycle Inquiries</h3>
+                    <h3>Call Us</h3>
                     <p>Main: <span>+1 (555) 123-4567</span></p>
-                    <p>Sales: <span>+1 (555) 234-5678</span></p>
-                    <p>Support: <span>+1 (555) 345-6789</span></p>
+                    <p>Gallery Inquiries: <span>+1 (555) 234-5678</span></p>
+                    <p>General: <span>+1 (555) 345-6789</span></p>
                     <a href="tel:+15551234567" class="info-link">Call Now <i class="fas fa-phone" aria-hidden="true"></i></a>
                 </div>
 
@@ -75,14 +79,14 @@
                     <div class="info-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
                     <h3>Email Us</h3>
                     <p>General: info@mgallery.com</p>
-                    <p>Sales: sales@mgallery.com</p>
-                    <p>Support: support@mgallery.com</p>
+                    <p>Gallery: gallery@mgallery.com</p>
+                    <p>Inquiries: inquiries@mgallery.com</p>
                     <a href="mailto:info@mgallery.com" class="info-link">Send Email <i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="contact-info-card">
                     <div class="info-icon" aria-hidden="true"><i class="fas fa-clock"></i></div>
-                    <h3>Business Hours</h3>
+                    <h3>Gallery Hours</h3>
                     <p><strong>Mon - Fri:</strong> 9:00 AM - 6:00 PM</p>
                     <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM</p>
                     <p><strong>Sunday:</strong> Closed</p>
@@ -90,10 +94,11 @@
                 </div>
             </div>
 
+            <!-- Contact Form Section -->
             <div class="contact-form-section">
                 <div class="form-header">
-                    <h2 class="section-title">Send Us a Message</h2>
-                    <p>Have questions about our premium motorcycles? Fill out the form below and our team will respond within 24 hours</p>
+                    <h2 class="section-title">Send Us Your Inquiry</h2>
+                    <p>Have questions about our gallery or motorcycles? Fill out the form below and we'll get back to you within 24 hours</p>
                 </div>
 
                 <form class="contact-form" id="contactForm" method="POST" action="/contact" novalidate>
@@ -117,18 +122,18 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required placeholder="What is this about?" aria-required="true">
+                            <input type="text" id="subject" name="subject" required placeholder="What is your inquiry about?" aria-required="true">
                         </div>
 
                         <div class="form-group">
-                            <label for="category">Inquiry Category *</label>
+                            <label for="category">Inquiry Type *</label>
                             <select id="category" name="category" required aria-required="true">
-                                <option value="">-- Select Category --</option>
-                                <option value="inquiry">General Inquiry</option>
-                                <option value="sales">Sales Information</option>
-                                <option value="support">Customer Support</option>
-                                <option value="service">Service & Maintenance</option>
-                                <option value="financing">Financing Question</option>
+                                <option value="">-- Select Type --</option>
+                                <option value="gallery">Gallery Information</option>
+                                <option value="motorcycle">Motorcycle Inquiry</option>
+                                <option value="collection">Collection Information</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="media">Media Inquiry</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -143,7 +148,7 @@
                     <div class="form-group checkbox-group">
                         <label for="subscribe">
                             <input type="checkbox" id="subscribe" name="subscribe">
-                            Subscribe to our newsletter for exclusive motorcycle offers and updates
+                            Subscribe to our gallery updates and new additions
                         </label>
                     </div>
 
@@ -155,7 +160,7 @@
                         <span class="error-message" id="termsError"></span>
                     </div>
 
-                    <button type="submit" class="cta-button" aria-label="Submit contact form">Send Message</button>
+                    <button type="submit" class="cta-button" aria-label="Submit contact form">Send Inquiry</button>
 
                     <div class="form-status" id="formStatus">
                         <p id="statusMessage"></p>
@@ -163,66 +168,67 @@
                 </form>
             </div>
 
+            <!-- FAQ Section -->
             <section class="faq-section" aria-labelledby="faq-heading">
-                <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+                <h2 id="faq-heading" class="section-title">Gallery FAQs</h2>
                 <div class="faq-grid">
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFAQ(this)">
-                            <h3>How do I purchase a motorcycle from M Gallery?</h3>
+                            <h3>How often is the gallery updated?</h3>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </div>
                         <div class="faq-content">
-                            <p>Browse our gallery, select your desired motorcycle, and contact our sales team. We'll guide you through the entire purchase process including financing options and delivery arrangements.</p>
+                            <p>Our gallery is regularly updated with new motorcycles and information. We add featured models monthly and continuously refresh our collection with the latest motorcycles from around the world.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFAQ(this)">
-                            <h3>Do you offer financing options for motorcycles?</h3>
+                            <h3>Can I request a specific motorcycle to be featured?</h3>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </div>
                         <div class="faq-content">
-                            <p>Yes! We offer flexible financing plans with competitive rates. Our team can work with various lenders to find the best option for your budget.</p>
+                            <p>Yes! We welcome suggestions from motorcycle enthusiasts. Please contact us with details about the motorcycle you'd like to see featured in our gallery, and we'll consider it for inclusion.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFAQ(this)">
-                            <h3>What warranty do you provide for motorcycles?</h3>
+                            <h3>Can I use gallery photos for my website or publication?</h3>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </div>
                         <div class="faq-content">
-                            <p>All our motorcycles come with comprehensive warranty coverage. The duration varies by model and condition. Contact us for specific details on your chosen motorcycle.</p>
+                            <p>Please contact us regarding photo usage rights. We may be able to grant permission for certain uses with proper attribution. Contact our gallery team for more information.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFAQ(this)">
-                            <h3>Do you provide delivery service for motorcycles?</h3>
+                            <h3>Do you offer gallery tours or visits?</h3>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </div>
                         <div class="faq-content">
-                            <p>Yes, we offer nationwide delivery services for motorcycle purchases. Delivery options and costs depend on your location. Our sales team will provide a quote during purchase.</p>
+                            <p>Yes! We welcome visitors to our physical gallery location. Please contact us to schedule a visit or tour. Group visits can be arranged with advance notice.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFAQ(this)">
-                            <h3>Can I trade in my current motorcycle?</h3>
+                            <h3>How can I stay updated on new gallery additions?</h3>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </div>
                         <div class="faq-content">
-                            <p>Absolutely! We accept motorcycle trade-ins. Bring your current bike for evaluation, and we'll offer you a fair trade-in value towards your new motorcycle purchase.</p>
+                            <p>Subscribe to our gallery updates through our contact form or newsletter. You'll receive notifications about new motorcycles, collections, and gallery features directly in your inbox.</p>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-header" onclick="toggleFAQ(this)">
-                            <h3>What after-sales services do you offer?</h3>
+                            <h3>Can I provide feedback on the gallery?</h3>
                             <i class="fas fa-chevron-down" aria-hidden="true"></i>
                         </div>
                         <div class="faq-content">
-                            <p>We offer comprehensive after-sales support including maintenance, repairs, customization, and 24/7 customer support. Our certified technicians are ready to assist you with motorcycle service.</p>
+                            <p>Absolutely! We value your feedback. Please use our contact form to share your thoughts, suggestions, or any improvements you'd like to see in our gallery.</p>
                         </div>
                     </div>
                 </div>
@@ -230,12 +236,13 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>M Gallery</h4>
-                    <p>Your ultimate destination for premium motorcycles and exceptional service.</p>
+                    <p>Your premier destination for premium motorcycle gallery and showcase</p>
                     <div class="social-links" role="list">
                         <a href="#" role="listitem" aria-label="M Gallery Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                         <a href="#" role="listitem" aria-label="M Gallery Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
@@ -248,23 +255,23 @@
                     <ul role="list">
                         <li role="listitem"><a href="index.html">Home</a></li>
                         <li role="listitem"><a href="gallery.html">Gallery</a></li>
-                        <li role="listitem"><a href="collection.html">Collection</a></li>
+                        <li role="listitem"><a href="collection.html">Collections</a></li>
                         <li role="listitem"><a href="about.html">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Collections</h4>
                     <ul role="list">
-                        <li role="listitem"><a href="collection.html#sport">Sport Bikes</a></li>
-                        <li role="listitem"><a href="collection.html#cruiser">Cruiser Bikes</a></li>
-                        <li role="listitem"><a href="collection.html#adventure">Adventure Bikes</a></li>
-                        <li role="listitem"><a href="collection.html#touring">Touring Bikes</a></li>
+                        <li role="listitem"><a href="collection.html#sport">Sport Collection</a></li>
+                        <li role="listitem"><a href="collection.html#cruiser">Cruiser Collection</a></li>
+                        <li role="listitem"><a href="collection.html#adventure">Adventure Collection</a></li>
+                        <li role="listitem"><a href="collection.html#touring">Touring Collection</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul role="list">
-                        <li role="listitem"><a href="#" rel="nofollow">FAQ</a></li>
+                        <li role="listitem"><a href="#" rel="nofollow">Gallery FAQ</a></li>
                         <li role="listitem"><a href="#" rel="nofollow">Privacy Policy</a></li>
                         <li role="listitem"><a href="#" rel="nofollow">Terms of Service</a></li>
                         <li role="listitem"><a href="contact.html">Contact Us</a></li>
@@ -272,7 +279,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 M Gallery. All Rights Reserved. | <a href="sitemap.xml" rel="nofollow">Sitemap</a></p>
+                <p>&copy; 2026 M Gallery. All Rights Reserved. | Premium Motorcycle Gallery | <a href="sitemap.xml" rel="nofollow">Sitemap</a></p>
             </div>
         </div>
     </footer>
