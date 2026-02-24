@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - M Gallery</title>
+    <meta name="description" content="M Gallery - Browse our exclusive motorcycle gallery. Explore premium motorcycles including sport bikes, cruisers, adventure bikes, and touring motorcycles.">
+    <meta name="keywords" content="motorcycle gallery, browse motorcycles, sport bikes gallery, cruiser bikes, adventure motorcycles, touring bikes">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Motorcycle Gallery - M Gallery">
+    <meta property="og:description" content="Browse exclusive collection of premium motorcycles">
+    
+    <title>Motorcycle Gallery - Browse Premium Bikes | M Gallery</title>
+    <link rel="canonical" href="https://www.mgallery.com/gallery.html">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Premium Google Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Motorcycle Gallery",
+      "description": "Premium motorcycle gallery featuring luxury bikes"
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-motorcycle"></i>
+                <i class="fas fa-motorcycle" aria-hidden="true"></i>
                 <span>M Gallery</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
-                <li><a href="collection.html" class="nav-link">Collection</a></li>
+                <li><a href="collection.html" class="nav-link">Collections</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -42,240 +68,253 @@
     </div>
 
     <!-- Gallery Section -->
-    <section class="gallery-page">
+    <section class="gallery-page" role="main" aria-labelledby="gallery-heading">
         <div class="container">
+            <h2 id="gallery-heading" class="sr-only">Browse Motorcycles</h2>
+            
             <div class="gallery-controls">
                 <div class="search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="searchBox" placeholder="Search motorcycles..." >
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="searchBox" placeholder="Search motorcycles..." aria-label="Search motorcycles">
                 </div>
                 
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="sport">Sport</button>
-                    <button class="filter-btn" data-filter="cruiser">Cruiser</button>
-                    <button class="filter-btn" data-filter="adventure">Adventure</button>
-                    <button class="filter-btn" data-filter="touring">Touring</button>
+                <div class="filter-buttons" role="group" aria-label="Filter motorcycles by type">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn" data-filter="sport" aria-pressed="false">Sport</button>
+                    <button class="filter-btn" data-filter="cruiser" aria-pressed="false">Cruiser</button>
+                    <button class="filter-btn" data-filter="adventure" aria-pressed="false">Adventure</button>
+                    <button class="filter-btn" data-filter="touring" aria-pressed="false">Touring</button>
                 </div>
 
-                <div class="view-toggle">
-                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
-                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                <div class="view-toggle" role="group" aria-label="Change view">
+                    <button class="view-btn active" data-view="grid" aria-pressed="true" aria-label="Grid view"><i class="fas fa-th" aria-hidden="true"></i></button>
+                    <button class="view-btn" data-view="list" aria-pressed="false" aria-label="List view"><i class="fas fa-list" aria-hidden="true"></i></button>
                 </div>
             </div>
 
             <div class="gallery-grid" id="galleryContainer">
-                <!-- Gallery items will be populated here -->
-                <div class="gallery-item sport" data-name="Kawasaki Z H2 SE">
+                <!-- Sport Bike 1 -->
+                <article class="gallery-item sport" data-name="Lightning Racer">
                     <div class="gallery-image-wrapper">
-                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/61/2010/kawasaki-z-h2-se-slant-front-view-full-image-801398.jpg" alt="Kawasaki Z H2 SE">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Lightning Racer - High-performance sport motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Kawasaki Z H2 SE</h4>
-                            <p>High Performance Sport "hyper-naked"</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <h3>Lightning Racer</h3>
+                            <p>High Performance Sport</p>
+                            <button class="view-btn-overlay" aria-label="View Lightning Racer details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge sport">SPORT</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Kawasaki Z H2 SE</h5>
-                        <p class="price">RM97,800</p>
+                        <h4>Lightning Racer</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> 200 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item cruiser" data-name="Harley-Davidson Low Rider">
+                <!-- Cruiser 1 -->
+                <article class="gallery-item cruiser" data-name="Midnight Cruiser">
                     <div class="gallery-image-wrapper">
-                        <img src="https://www.datocms-assets.com/119921/1714133881-harley-davidson-low-rider-s-review-used-guide_02.jpg?auto=format&w=740" alt="Harley-Davidson Low Ride">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Midnight Cruiser - Classic luxury cruiser motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Harley-Davidson Low Ride</h4>
-                            <p>Performance-Focused Cruiser inspired by 1970s custom chopper style</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <h3>Midnight Cruiser</h3>
+                            <p>Classic Comfort Ride</p>
+                            <button class="view-btn-overlay" aria-label="View Midnight Cruiser details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge cruiser">CRUISER</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Harley-Davidson Low Ride</h5>
-                        <p class="price">RM 123,900</p>
+                        <h4>Midnight Cruiser</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-crown" aria-hidden="true"></i> 150 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item adventure" data-name="Suzuki V-Strom 650">
+                <!-- Adventure 1 -->
+                <article class="gallery-item adventure" data-name="Trail Explorer">
                     <div class="gallery-image-wrapper">
-                        <img src="https://imgcdn.zigwheels.my/large/gallery/exterior/69/965/suzuki-v-strom-650-slant-front-view-full-image-484390.jpg?tr=w-510,h-340" alt="Suzuki V-Strom 650">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Trail Explorer - All-terrain adventure motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Suzuki V-Strom 650</h4>
-                            <p>Mid-Weight Adventure Touring Motorcycle</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <h3>Trail Explorer</h3>
+                            <p>Off-Road Adventure</p>
+                            <button class="view-btn-overlay" aria-label="View Trail Explorer details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge adventure">ADVENTURE</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Suzuki V-Strom 650</h5>
-                        <p class="price">RM44,789</p>
+                        <h4>Trail Explorer</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-mountain" aria-hidden="true"></i> 180 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item sport" data-name="Thunder Beast">
+                <!-- Sport Bike 2 -->
+                <article class="gallery-item sport" data-name="Thunder Beast">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Thunder Beast">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Thunder Beast - Ultimate speed machine sport motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Thunder Beast</h4>
+                            <h3>Thunder Beast</h3>
                             <p>Ultimate Speed Machine</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <button class="view-btn-overlay" aria-label="View Thunder Beast details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge sport">SPORT</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Thunder Beast</h5>
-                        <p class="price">$26,999</p>
+                        <h4>Thunder Beast</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-lightning" aria-hidden="true"></i> 220 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item touring" data-name="Grand Traveler">
+                <!-- Touring 1 -->
+                <article class="gallery-item touring" data-name="Grand Traveler">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Grand Traveler">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Grand Traveler - Long-distance touring motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Grand Traveler</h4>
-                            <p>Long Distance Comfort</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <h3>Grand Traveler</h3>
+                            <p>Long Distance Touring</p>
+                            <button class="view-btn-overlay" aria-label="View Grand Traveler details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge touring">TOURING</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Grand Traveler</h5>
-                        <p class="price">$22,999</p>
+                        <h4>Grand Traveler</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-road" aria-hidden="true"></i> 175 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item cruiser" data-name="Heritage Classic">
+                <!-- Cruiser 2 -->
+                <article class="gallery-item cruiser" data-name="Heritage Classic">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Heritage Classic">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Heritage Classic - Timeless elegance cruiser motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Heritage Classic</h4>
+                            <h3>Heritage Classic</h3>
                             <p>Timeless Elegance</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <button class="view-btn-overlay" aria-label="View Heritage Classic details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge cruiser">CRUISER</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Heritage Classic</h5>
-                        <p class="price">$19,999</p>
+                        <h4>Heritage Classic</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-star" aria-hidden="true"></i> Premium</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item adventure" data-name="Desert Storm">
+                <!-- Adventure 2 -->
+                <article class="gallery-item adventure" data-name="Desert Storm">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Desert Storm">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Desert Storm - All-terrain adventure motorcycle beast">
                         <div class="gallery-overlay">
-                            <h4>Desert Storm</h4>
+                            <h3>Desert Storm</h3>
                             <p>All-Terrain Beast</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <button class="view-btn-overlay" aria-label="View Desert Storm details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge adventure">ADVENTURE</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Desert Storm</h5>
-                        <p class="price">$23,999</p>
+                        <h4>Desert Storm</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-mountain" aria-hidden="true"></i> 190 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item sport" data-name="Apex Turbo">
+                <!-- Sport Bike 3 -->
+                <article class="gallery-item sport" data-name="Apex Turbo">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Apex Turbo">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Apex Turbo - Performance king sport motorcycle">
                         <div class="gallery-overlay">
-                            <h4>Apex Turbo</h4>
+                            <h3>Apex Turbo</h3>
                             <p>Performance King</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <button class="view-btn-overlay" aria-label="View Apex Turbo details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge sport">SPORT</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Apex Turbo</h5>
-                        <p class="price">$28,999</p>
+                        <h4>Apex Turbo</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> 210 HP</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="gallery-item touring" data-name="Luxury Voyager">
+                <!-- Touring 2 -->
+                <article class="gallery-item touring" data-name="Luxury Voyager">
                     <div class="gallery-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Luxury Voyager">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=300&fit=crop" alt="Luxury Voyager - Premium touring motorcycle experience">
                         <div class="gallery-overlay">
-                            <h4>Luxury Voyager</h4>
-                            <p>Premium Touring Experience</p>
-                            <button class="view-btn-overlay"><i class="fas fa-eye"></i> View</button>
+                            <h3>Luxury Voyager</h3>
+                            <p>Premium Touring</p>
+                            <button class="view-btn-overlay" aria-label="View Luxury Voyager details"><i class="fas fa-eye" aria-hidden="true"></i> View</button>
                         </div>
                         <span class="category-badge touring">TOURING</span>
                     </div>
                     <div class="gallery-info">
-                        <h5>Luxury Voyager</h5>
-                        <p class="price">$25,999</p>
+                        <h4>Luxury Voyager</h4>
+                        <p class="model-year">2026 Model</p>
+                        <p class="specs"><i class="fas fa-star" aria-hidden="true"></i> Luxury</p>
                     </div>
-                </div>
+                </article>
             </div>
 
-            <div class="no-results" style="display: none;">
-                <i class="fas fa-search"></i>
+            <div class="no-results" style="display: none;" role="alert">
+                <i class="fas fa-search" aria-hidden="true"></i>
                 <h3>No motorcycles found</h3>
                 <p>Try adjusting your filters or search terms</p>
             </div>
         </div>
     </section>
 
-    <!-- Quick Comparison Section -->
-    <section class="comparison-section">
+    <!-- Specifications Comparison Section -->
+    <section class="specs-comparison" aria-labelledby="specs-title">
         <div class="container">
-            <h2 class="section-title">Compare Models</h2>
-            <p class="comparison-subtitle">Select up to 3 models to compare specifications</p>
+            <h2 id="specs-title" class="section-title">Motorcycle Specifications</h2>
+            <p class="comparison-subtitle">Compare specifications across our featured motorcycle models</p>
             <div class="comparison-table">
-                <table>
+                <table summary="Comparison of motorcycle specifications including engine, power, and performance">
                     <thead>
                         <tr>
-                            <th>Feature</th>
-                            <th>Lightning Racer</th>
-                            <th>Midnight Cruiser</th>
-                            <th>Trail Explorer</th>
+                            <th scope="col">Model</th>
+                            <th scope="col">Engine<br><span class="spec-category">Capacity</span></th>
+                            <th scope="col">Horsepower<br><span class="spec-category">Output</span></th>
+                            <th scope="col">0-100 km/h<br><span class="spec-category">Acceleration</span></th>
+                            <th scope="col">Top Speed<br><span class="spec-category">Maximum</span></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Engine</strong></td>
+                            <th scope="row">Lightning Racer</th>
                             <td>1299cc</td>
-                            <td>1200cc</td>
-                            <td>1100cc</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Power</strong></td>
                             <td>200 HP</td>
-                            <td>150 HP</td>
-                            <td>180 HP</td>
-                        </tr>
-                        <tr>
-                            <td><strong>0-100 km/h</strong></td>
                             <td>3.2 sec</td>
-                            <td>5.0 sec</td>
-                            <td>4.2 sec</td>
+                            <td>320 km/h</td>
                         </tr>
                         <tr>
-                            <td><strong>Top Speed</strong></td>
-                            <td>320 km/h</td>
+                            <th scope="row">Midnight Cruiser</th>
+                            <td>1200cc</td>
+                            <td>150 HP</td>
+                            <td>5.0 sec</td>
                             <td>240 km/h</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Trail Explorer</th>
+                            <td>1100cc</td>
+                            <td>180 HP</td>
+                            <td>4.2 sec</td>
                             <td>280 km/h</td>
                         </tr>
                         <tr>
-                            <td><strong>Fuel Tank</strong></td>
-                            <td>17 L</td>
-                            <td>20 L</td>
-                            <td>22 L</td>
+                            <th scope="row">Thunder Beast</th>
+                            <td>1350cc</td>
+                            <td>220 HP</td>
+                            <td>3.0 sec</td>
+                            <td>330 km/h</td>
                         </tr>
                         <tr>
-                            <td><strong>Weight</strong></td>
-                            <td>198 kg</td>
-                            <td>280 kg</td>
-                            <td>210 kg</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Price</strong></td>
-                            <td>$24,999</td>
-                            <td>$18,999</td>
-                            <td>$21,999</td>
+                            <th scope="row">Grand Traveler</th>
+                            <td>1300cc</td>
+                            <td>175 HP</td>
+                            <td>4.5 sec</td>
+                            <td>260 km/h</td>
                         </tr>
                     </tbody>
                 </table>
@@ -284,49 +323,49 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>M Gallery</h4>
-                    <p>Your ultimate destination for premium motorcycles and exceptional service.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    <p>Your premier destination for premium motorcycle gallery and showcase</p>
+                    <div class="social-links" role="list">
+                        <a href="#" role="listitem" aria-label="M Gallery Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="M Gallery Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="M Gallery Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" role="listitem" aria-label="M Gallery YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="collection.html">Collection</a></li>
-                        <li><a href="about.html">About</a></li>
+                    <ul role="list">
+                        <li role="listitem"><a href="index.html">Home</a></li>
+                        <li role="listitem"><a href="gallery.html">Gallery</a></li>
+                        <li role="listitem"><a href="collection.html">Collections</a></li>
+                        <li role="listitem"><a href="about.html">About</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Collections</h4>
-                    <ul>
-                        <li><a href="#">Sport Series</a></li>
-                        <li><a href="#">Cruiser Collection</a></li>
-                        <li><a href="#">Adventure Range</a></li>
-                        <li><a href="#">Touring Elite</a></li>
+                    <h4>Gallery Collections</h4>
+                    <ul role="list">
+                        <li role="listitem"><a href="collection.html#sport">Sport Bikes</a></li>
+                        <li role="listitem"><a href="collection.html#cruiser">Cruiser Bikes</a></li>
+                        <li role="listitem"><a href="collection.html#adventure">Adventure Bikes</a></li>
+                        <li role="listitem"><a href="collection.html#touring">Touring Bikes</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                    <ul role="list">
+                        <li role="listitem"><a href="#" rel="nofollow">Gallery FAQ</a></li>
+                        <li role="listitem"><a href="#" rel="nofollow">Privacy Policy</a></li>
+                        <li role="listitem"><a href="#" rel="nofollow">Terms of Service</a></li>
+                        <li role="listitem"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 M Gallery. All Rights Reserved. | Premium Motorcycle Showcase</p>
+                <p>&copy; 2026 M Gallery. All Rights Reserved. | Premium Motorcycle Gallery | <a href="sitemap.xml" rel="nofollow">Sitemap</a></p>
             </div>
         </div>
     </footer>
