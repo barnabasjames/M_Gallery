@@ -814,3 +814,108 @@ window.addEventListener('load', () => {
     console.log('✓ Page fully loaded and initialized');
     console.log('✓ All scripts and styles loaded successfully');
 });
+
+// ===================================
+// GALLERY MODAL FUNCTIONALITY
+// ===================================
+
+const modal = document.getElementById('galleryModal');
+const modalImage = document.getElementById('modalImage');
+const modalCaption = document.getElementById('modalCaption');
+const closeModal = document.querySelector('.close-modal');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+
+let currentBikeImages = [];
+let currentIndex = 0;
+
+// Define 4 images per bike
+const bikeImages = {
+    "Ducati Panigale V4": [
+        "https://www.cycleworld.com/resizer/FNiCjJYFHmvrj0B2Ik2ft1h0hJA=/1440x0/smart/cloudfront-us-east-1.images.arcpublishing.com/octane/3QSKYK4E65CCFI4WLDPO63VM3Q.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Ducati/panigale_v4_2.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Ducati/panigale_v4_3.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Ducati/panigale_v4_4.jpg"
+    ],
+    "Benda Napoleon Bob 500": [
+        "https://buyasuperbike.com/wp-content/uploads/2024/12/20240108140407.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Benda/napoleon_bob_2.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Benda/napoleon_bob_3.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Benda/napoleon_bob_4.jpg"
+    ],
+    "BMW S 1000 XR": [
+        "https://imgcdn.zigwheels.my/large/gallery/exterior/54/1194/bmw-s-1000-xr-slant-front-view-full-image-245883.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/BMW/s1000_xr_2.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/BMW/s1000_xr_3.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/BMW/s1000_xr_4.jpg"
+    ],
+    "Kawasaki Ninja 250": [
+        "https://imgcdn.zigwheels.my/large/gallery/exterior/61/1502/kawasaki-ninja-250-slant-rear-view-full-image-700720.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Kawasaki/ninja250_2.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Kawasaki/ninja250_3.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Kawasaki/ninja250_4.jpg"
+    ],
+    "Yamaha Tracer 900 GT": [
+        "https://www.zabikers.co.za/wp-content/uploads/2019/11/Tracer-Cover.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Yamaha/tracer900gt_2.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Yamaha/tracer900gt_3.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Yamaha/tracer900gt_4.jpg"
+    ],
+    "Harley-Davidson Low Rider": [
+        "https://www.cycleworld.com/resizer/EiomyQUgU2Fi9AxHEp3OL46Sq4s=/arc-photo-octane/arc3-prod/public/T3TRG4XRLVAF3H4UYGJC6VGLDI.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Harley/low_rider_2.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Harley/low_rider_3.jpg",
+        "https://www.motorcyclespecs.co.za/gallery/Harley/low_rider_4.jpg"
+    ]
+    // add other bikes similarly...
+};
+
+// Add click event to each "View" button
+document.querySelectorAll('.view-btn-overlay').forEach(button => {
+    button.addEventListener('click', (e) => {
+        const bikeName = button.closest('.gallery-item').getAttribute('data-name');
+        if (bikeImages[bikeName]) {
+            currentBikeImages = bikeImages[bikeName];
+            currentIndex = 0;
+            openModal();
+        }
+    });
+});
+
+function openModal() {
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden', 'false');
+    showImage();
+}
+
+function closeModalFunc() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+}
+
+function showImage() {
+    modalImage.src = currentBikeImages[currentIndex];
+    modalCaption.textContent = `Image ${currentIndex + 1} of ${currentBikeImages.length}`;
+}
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % currentBikeImages.length;
+    showImage();
+});
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + currentBikeImages.length) % currentBikeImages.length;
+    showImage();
+});
+
+closeModal.addEventListener('click', closeModalFunc);
+
+// Close modal on outside click
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModalFunc();
+});
+
+// Close modal on ESC key
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModalFunc();
+});
