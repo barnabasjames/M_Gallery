@@ -2079,4 +2079,58 @@ p {
     .form-group textarea {
         font-size: 16px;
     }
+   /* ===================================
+   IMAGE MODAL / LIGHTBOX
+   =================================== */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.modal-content {
+    max-width: 1000px;
+    width: 90%;
+    padding: 20px;
+    position: relative;
+    background: var(--tertiary-color);
+    border-radius: 12px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+}
+
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.modal-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+ }
 }
